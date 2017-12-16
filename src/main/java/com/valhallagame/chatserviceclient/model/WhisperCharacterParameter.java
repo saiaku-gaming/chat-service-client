@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class WhisperCharacterParameter {
+	private String senderUsername;
 	private String message;
 	private String targetCharacterName;
 	private String senderCharacterName;

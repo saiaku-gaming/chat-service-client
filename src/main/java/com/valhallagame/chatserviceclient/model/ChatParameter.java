@@ -8,5 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChatParameter {
+	private String senderUsername;
 	private String message;
+	private String senderCharacterName;
 }
