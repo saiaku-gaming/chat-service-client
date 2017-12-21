@@ -10,6 +10,5 @@ import lombok.NoArgsConstructor;
 public class WhisperPersonParameter {
 	private String senderUsername;
 	private String message;
-	private String targetUsername;
-	private String senderCharacterName;	
+	private String targetDisplayUsername;
 }

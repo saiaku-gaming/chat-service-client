@@ -10,5 +10,4 @@ import lombok.NoArgsConstructor;
 public class ChatParameter {
 	private String senderUsername;
 	private String message;
-	private String senderCharacterName;
 }
