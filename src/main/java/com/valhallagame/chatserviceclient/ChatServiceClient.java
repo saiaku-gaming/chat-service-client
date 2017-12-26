@@ -2,9 +2,9 @@ package com.valhallagame.chatserviceclient;
 
 import java.io.IOException;
 
-import com.valhallagame.chatserviceclient.model.ChatParameter;
-import com.valhallagame.chatserviceclient.model.WhisperCharacterParameter;
-import com.valhallagame.chatserviceclient.model.WhisperPersonParameter;
+import com.valhallagame.chatserviceclient.message.ChatParameter;
+import com.valhallagame.chatserviceclient.message.WhisperCharacterParameter;
+import com.valhallagame.chatserviceclient.message.WhisperPersonParameter;
 import com.valhallagame.common.DefaultServicePortMappings;
 import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;

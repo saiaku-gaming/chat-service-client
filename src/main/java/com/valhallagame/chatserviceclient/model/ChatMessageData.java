@@ -1,5 +1,7 @@
 package com.valhallagame.chatserviceclient.model;
 
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +9,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class WhisperPersonParameter {
-	private String senderUsername;
+public class ChatMessageData {
+	@NotNull
+	private String senderDisplayCharacterName;
+	@NotNull
 	private String message;
-	private String targetDisplayUsername;
+	@NotNull
+	private ChatType chatType;
 }
