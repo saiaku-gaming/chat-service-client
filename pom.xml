@@ -23,7 +23,7 @@
 			<id>snapshots</id>
 	        <name>a60597f462c3-snapshots</name>
 	        <url>https://artifactory.valhalla-game.com/libs-snapshot-local</url>
-		</snapshotRepository>
+		</snapshotRepository> 
 	</distributionManagement>
 
 	<dependencies>
