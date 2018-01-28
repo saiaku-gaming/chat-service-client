@@ -2,6 +2,7 @@ package com.valhallagame.chatserviceclient.message;
 
 import javax.validation.constraints.NotNull;
 
+import com.valhallagame.common.ExposedNameInYmer;
 import com.valhallagame.common.validation.CheckLowercase;
 
 import lombok.AllArgsConstructor;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class WhisperCharacterParameter {
 	@NotNull
 	@CheckLowercase
-	private String senderUsername;
+	private String username;
 	@NotNull
 	private String message;
 	@NotNull

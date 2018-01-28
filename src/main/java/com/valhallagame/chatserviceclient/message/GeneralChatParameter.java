@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChatParameter {
+public class GeneralChatParameter {
 	@NotNull
 	@CheckLowercase
-	private String senderUsername;
+	private String username;
 
 	@NotNull
 	private String message;

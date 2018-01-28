@@ -11,12 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class WhisperPersonParameter {
+public class InstanceChatParameter {
 	@NotNull
 	@CheckLowercase
 	private String username;
+
 	@NotNull
 	private String message;
-	@NotNull
-	private String targetDisplayUsername;
 }

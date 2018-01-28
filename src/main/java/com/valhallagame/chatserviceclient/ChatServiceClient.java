@@ -2,7 +2,9 @@ package com.valhallagame.chatserviceclient;
 
 import java.io.IOException;
 
-import com.valhallagame.chatserviceclient.message.ChatParameter;
+import com.valhallagame.chatserviceclient.message.GeneralChatParameter;
+import com.valhallagame.chatserviceclient.message.InstanceChatParameter;
+import com.valhallagame.chatserviceclient.message.PartyChatParameter;
 import com.valhallagame.chatserviceclient.message.WhisperCharacterParameter;
 import com.valhallagame.chatserviceclient.message.WhisperPersonParameter;
 import com.valhallagame.common.DefaultServicePortMappings;
@@ -32,24 +34,29 @@ public class ChatServiceClient {
 		return chatServiceClient;
 	}
 
-	public RestResponse<String> whisperPerson(WhisperPersonParameter whisperParameter) throws IOException {
-		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/whisper-person", whisperParameter, String.class);
+	public RestResponse<String> whisperPerson(String username, String message, String targetDisplayUsername) throws IOException {
+		WhisperPersonParameter input = new WhisperPersonParameter(username, message, targetDisplayUsername);
+		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/whisper-person", input, String.class);
 	}
 
-	public RestResponse<String> whisperCharacter(WhisperCharacterParameter whisperParameter) throws IOException {
-		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/whisper-character", whisperParameter, String.class);
+	public RestResponse<String> whisperCharacter(String username, String message, String targetDisplayCharacterName) throws IOException {
+		WhisperCharacterParameter input = new WhisperCharacterParameter(username, message, targetDisplayCharacterName);
+		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/whisper-character", input, String.class);
 	}
 
-	public RestResponse<String> instanceChat(ChatParameter chatParameter) throws IOException {
-		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/instance-chat", chatParameter, String.class);
+	public RestResponse<String> instanceChat(String username, String message) throws IOException {
+		InstanceChatParameter input = new InstanceChatParameter(username, message);
+		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/instance-chat", input, String.class);
 	}
 
-	public RestResponse<String> generalChat(ChatParameter chatParameter) throws IOException {
-		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/general-chat", chatParameter, String.class);
+	public RestResponse<String> generalChat(String username, String message) throws IOException {
+		GeneralChatParameter input = new GeneralChatParameter(username, message);
+		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/general-chat", input, String.class);
 	}
 
-	public RestResponse<String> partyChat(ChatParameter chatParameter) throws IOException {
-		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/party-chat", chatParameter, String.class);
+	public RestResponse<String> partyChat(String username, String message) throws IOException {
+		PartyChatParameter input = new PartyChatParameter(username, message);
+		return restCaller.postCall(chatServiceServerUrl + "/v1/chat/party-chat", input, String.class);
 	}
 
 }
