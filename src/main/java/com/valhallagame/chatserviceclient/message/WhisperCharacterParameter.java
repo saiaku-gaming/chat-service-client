@@ -2,7 +2,6 @@ package com.valhallagame.chatserviceclient.message;
 
 import javax.validation.constraints.NotNull;
 
-import com.valhallagame.common.ExposedNameInYmer;
 import com.valhallagame.common.validation.CheckLowercase;
 
 import lombok.AllArgsConstructor;
