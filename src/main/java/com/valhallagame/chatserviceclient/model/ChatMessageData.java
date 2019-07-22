@@ -1,18 +1,19 @@
 package com.valhallagame.chatserviceclient.model;
 
-import javax.validation.constraints.NotNull;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChatMessageData {
-	@NotNull
+	@NotBlank
 	private String senderDisplayCharacterName;
-	@NotNull
+	@NotBlank
 	private String message;
 	@NotNull
 	private ChatType chatType;
